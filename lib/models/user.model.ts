@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
     name: {type: String, required: true},
     image: String,
     bio: String,
-    codebase: [
+    threads: [
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref: 'Codebase'
+            ref: 'Thread'
         }
     ],
     onboarded: {
@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     communities: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Coommunity'
+            ref: 'Community'
         }
     ] 
 });
