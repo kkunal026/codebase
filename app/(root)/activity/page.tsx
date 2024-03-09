@@ -21,7 +21,7 @@ const Page = async () => {
           <section className="mt-10 flex flex-col gap-5">
             {activity.length > 0 ? (
               <>
-                {activity.map((activity) => {
+                {activity.map((activity) => (
                   <Link
                     key={activity._id}
                     href={`/thread/${activity.parentId}`}
@@ -41,7 +41,7 @@ const Page = async () => {
                       </p>
                     </article>
                   </Link>
-                })}
+                ))}
               </>
             ) : (
               <p className="!text-base-regular text-light-3">No acitvity yet</p>
